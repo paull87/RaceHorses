@@ -18,3 +18,8 @@ class Horse:
         """Prints a formatted version of the horse details."""
         fmt = '{0}\n\tMeeting: {1}\n\tTime: {2}\n\tOdds: {3}'
         print(fmt.format(self.name, self.meeting, self.time, self.odds))
+
+    def horse_format(self):
+        """Returns a formatted version of the horse details."""
+        fmt = '{0}\n\tMeeting: {1}\n\tTime: {2}\n\tOdds: {3}'
+        return fmt.format(self.name, self.meeting, self.time, self.odds)

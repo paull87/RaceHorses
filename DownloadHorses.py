@@ -21,7 +21,7 @@ class Horses:
             if horse:
                 self.horses.append(horse)
 
-    def search_horses(self, searches):
+    def show_horses(self, searches):
         """Checks to see if horses have any of the given names."""
         for horse in self.horses:
             for search in searches:
@@ -29,6 +29,15 @@ class Horses:
                     horse.display_horse()
                     break
 
+    def search_horses(self, searches):
+        """Checks to see if horses have any of the given names."""
+        output = ''
+        for horse in self.horses:
+            for search in searches:
+                if search.lower() in horse.name.lower():
+                    output += horse.horse_format() + '\n\n'
+                    break
+        return output
 
 def download_page(site):
     """Downloads and parses the website, returning the bs4 result."""
@@ -66,4 +75,4 @@ if __name__ == '__main__':
     #for horse in my_horses.horses:
     #    horse.display_horse()
 
-    my_horses.search_horses(['Poppy', 'Pop', 'October', 'Gem', 'World'])
+    print(my_horses.search_horses(['Poppy', 'Pop', 'October', 'Gem', 'World']))
