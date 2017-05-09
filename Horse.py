@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 class Horse:
     """Class that contains details of a horse."""

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import requests
 import bs4
 from Horse import Horse
