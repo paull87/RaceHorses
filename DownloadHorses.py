@@ -41,11 +41,10 @@ class Horses:
                     break
         return output
 
+
 def download_page(site):
     """Downloads and parses the website, returning the bs4 result."""
     res = requests.get(site)
-    with open('C://temp//RacehorseDB.txt', 'w') as text_file:
-        text_file.write(res.text)
     try:
         return bs4.BeautifulSoup(res.text, 'html.parser')
     except Exception as e:
